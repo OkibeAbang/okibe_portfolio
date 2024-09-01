@@ -107,7 +107,7 @@
     </div>
 
 
-    <!--Services-->
+    <!--Projects-->
     <div id="portfolio">
         <div class="container">
             <h1 class="sub_title">My Projects</h1>
@@ -128,16 +128,59 @@
                         <p>yeah yeah</p>
                         <a href="#">link icon</a>
                     </div>
+                </div>
 
+                <div class="work hidden">
+                    <img src="./Portfolio_pics/img2.jpg" alt="sorrit">
+                    <div class="layer">
+                        <h3>Lotion App</h3>
+                        <p>yeah yeah</p>
+                        <a href="#">link icon</a>
+                    </div>
+                </div>
 
+                <div class="work hidden">
+                    <img src="./Portfolio_pics/img2.jpg" alt="sorrit">
+                    <div class="layer">
+                        <h3>Lotion App</h3>
+                        <p>yeah yeah</p>
+                        <a href="#">link icon</a>
+                    </div>
                 </div>
             </div>
-            <a href="#" class = "btn">See More</a>
+            <a href="#" class = "btn" id = "seeMore_btn">See More</a>
         </div>
     </div>
 
 
-    <!---->
+    <!--Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact_left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p>contact@gmail.com</p>
+                    <p>5875833336</p>
+                    <div class="social_icons">
+                        <a href="#">My linked IN</a>
+                        <a href="#">My linked IN</a>
+                        <a href="#">My linked IN</a>
+                        <a href="#">My linked IN</a>
+                    </div>
+                    <a href="./Portfolio_pics/co-op Resume.pdf"  download class = "btn btn2">Download Resume</a>
+                </div>
+                <div class="contact_right">
+                    <form>
+                        <input type="text" name = "Name" placeholder = "Your Name" required>
+                        <input type="email" name = "email" placeholder = "Your Email" required>
+                        <textarea name = "Message" rows = "6" placeholder = "Your Message"></textarea>
+                        <button type= submit class = "btn btn2" >Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright"> copyright Message</div>
+    </div>
 
     
 
@@ -157,6 +200,38 @@
         event.currentTarget.classList.add("active_link");
         document.getElementById(tabname).classList.add('active_tab')
     }
+
+    
+    document.getElementById('seeMore_btn').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        // Get all elements with class 'hidden'
+        const hiddenProjects = document.querySelectorAll('.work.hidden');
+
+        // Check if we are currently expanding or collapsing
+        const expanding = hiddenProjects.length > 0;
+
+        // Toggle the visibility of the projects
+        // For some weird reason, toggle does not work
+        if (expanding) {
+            hiddenProjects.forEach(work => {
+                work.classList.remove('hidden');
+            });
+        } else {
+            // If there are no hidden elements, we should hide the ones that were shown last time
+            const allProjects = document.querySelectorAll('.work');
+            allProjects.forEach((work, index) => {
+                if (index >= 2) { // Assuming the first two projects are always visible
+                    work.classList.add('hidden');
+                }
+            });
+        }
+
+        // Update the button text based on the current state
+        this.textContent = expanding ? 'See Less' : 'See More';
+    });
+
+    
 </script>
 
 </body>
