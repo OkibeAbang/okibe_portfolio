@@ -22,14 +22,14 @@
                     <li><a href = "#services">Services</a></li>
                     <li><a href = "#portfolio">Portfolio</a></li>
                     <li><a href = "#contact">Contact</a></li>
-                    <div onclick = "closemenu()">cross icon</div>
+                    <i class="fa-solid fa-x" onclick = "closemenu()"></i>
                 </ul>
-                <div onclick = "openmenu()">menu icon</div>
+                <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
                 
             </nav>
             <div class="header_txt">
                 <p>Software Engineer</p>
-                <h1>Hi, I am <span>Okibe</span><br> I am ...</h1>
+                <h1>Hi, there! <br> I am <span>Okibe.</span> </h1>
             </div>
         </div>
 
@@ -40,11 +40,14 @@
         <div class = "container">
             <div class="row">
                 <div class="about_col_1">
-                    <img src="#" alt="sorrit">
+                    <img src="./Portfolio_pics/image.jpg" alt="sorrit">
                 </div>
                 <div class="about_col_2">
-                    <h1 class = "subtitle">About Kibzy</h1>
-                    <p>menmnmnemnemn</p>
+                    <h1 class = "subtitle">About Me</h1>
+                    <p>I am a Software Engineering student at the university of Calgary, actively seeking an internship to apply and epanding my skills in software and full stack Development.
+                        With a strong foundation in web technologies and cloud platforms,
+                        I am eager to contribute to innovative projects while gainig practical industry experience.
+                    </p>
 
                     <div class="tab_titles">
                         <div class="tab_links active_link" onclick="opentab('skills')">Skills</div>
@@ -54,9 +57,10 @@
 
                     <div class="tab_contents active_tab" id = "skills">
                         <ul>
-                            <li><span>Software Engineer</span><br>Designing Web/App</li>
-                            <li><span>Software Engineer</span><br>Designing Web/App</li>
-                            <li><span>Software Engineer</span><br>Designing Web/App</li>
+                            <li><span>Programming</span><br>Python, HTML, CSS, JavaScript, React,<br> C, C++, Java</li>
+                            <li><span>Computer & Databases</span><br>Git, SQL,Terraform, AWS</li>
+                            <li><span>Data Analysis</span><br>Microsoft Excel, Python with Jupyter Notebook</li>
+                            <li><span>Microsoft Office</span><br>Excel, Word, Powerpoint, Access</li>
                         </ul>
                     </div>
 
@@ -70,9 +74,7 @@
 
                     <div class="tab_contents" id = 'education'>
                         <ul>
-                            <li><span>Software Engineer</span><br>Designing Web/App</li>
-                            <li><span>Software Engineer</span><br>Designing Web/App</li>
-                            <li><span>Software Engineer</span><br>Designing Web/byebye</li>
+                            <li><span>Bachelor of Sciences - Software Egineering <br> Sep. 2021-Apr, 2026</span><br>University of Calgary, <br>Schulich School of Engineering Calgary,<br> Canada</li>
                         </ul>
                     </div>
                 </div>
@@ -86,24 +88,27 @@
             <h1 class="sub_title">My Services</h1>
             <div class="services_list">
                 <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>menenenenenenen</p>
-                    <a href="#">Learn More...</a>
+                    <i class="fa-brands fa-html5"></i> <i class="fa-brands fa-css3-alt"></i> <i class="fa-brands fa-react"></i>
+                    <h2>Front End Web Design</h2>
+                    <p>Experinced in designing and implementing user interfaces for web applications. Proficient in HTML, CSS
+                        , and JavaScript, with a strong understanding of responsive design. Adept at using modern frameworks like Reactto create dynamic user experiences
+                    </p>
+                    <a href="#"></a>
                 </div>
 
                 <div>
-                    icon
-                    <h2>yes Design</h2>
-                    <p>menenenenenenen</p>
-                    <a href="#">Learn More...</a>
+                    <i class="fa-brands fa-node-js"></i> 
+                    <h2>Back End Development</h2>
+                    <p>Skilled in developing and maintaining server-side logic, databases, and APIs.
+                         Experience in Node.js with Express and familiarity with various databases like MongoDB, SQL, and DynamoDB.</p>
+                    <a href="#"></a>
                 </div>
 
                 <div>
-                    icon
-                    <h2>no Design</h2>
-                    <p>menenenenenenen</p>
-                    <a href="#">Learn More...</a>
+                    <i class="fa-brands fa-aws"></i>
+                    <h2>Cloud Computing</h2>
+                    <p>Proficient in designing deploying, and managing cloud infrastructure on platforms like AWS. Experience in utilizing servces such as S3 and Lambda.</p>
+                    <a href="#"></a>
                 </div>
             </div>
         </div>
@@ -118,38 +123,53 @@
                 <div class="work">
                     <img src="./Portfolio_pics/img1.jpg" alt="sorrit">
                     <div class="layer">
-                        <h3>Lotion App</h3>
-                        <p>yeah yeah</p>
-                        <a href="#">link icon</a>
+                        <h3><b>"Lotion Notes"</b></h3>
+                        <p>Full stack notes application which allows for adding, deleting, and formatting notes 
+                            with options for highlighting, italics, and bold texts. <br><br>
+                            <a href="#portfolio"><i class="fa-brands fa-github"></i></i></a>
+                        </p>
+                        
                     </div>
                 </div>
 
                 <div class="work">
-                    <img src="./Portfolio_pics/img2.jpg" alt="sorrit">
+                    <img src="./Portfolio_pics/img3.jpg" alt="sorrit">
                     <div class="layer">
-                        <h3>Lotion App</h3>
-                        <p>yeah yeah</p>
-                        <a href="#">link icon</a>
+                        <h3><b>"Summ-It-Up"</b></h3>
+                        <p>Currently working on website, useful for students that takes in youtube links, 
+                            and gives a summary of the contents of the youtube video <br><br><b>coming soon...</b></p>
+                        <a href="#portfolio"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
 
                 <div class="work hidden">
                     <img src="./Portfolio_pics/img2.jpg" alt="sorrit">
                     <div class="layer">
-                        <h3>Lotion App</h3>
-                        <p>yeah yeah</p>
-                        <a href="#">link icon</a>
+                        <h3><b>"K.B.Z Sport Gear"</b></h3>
+                        <p>Front End website that displays Sports gear as well as their prices. A website that focuses on User Interface and responsive designs</p>
+                        <a href="#portfolio"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
 
                 <div class="work hidden">
-                    <img src="./Portfolio_pics/img2.jpg" alt="sorrit">
+                    <img src="./Portfolio_pics/img99.jpg" alt="sorrit">
                     <div class="layer">
-                        <h3>Lotion App</h3>
+                        <h3><b>"Care-Circle"</b></h3>
                         <p>yeah yeah</p>
-                        <a href="#">link icon</a>
+                        <a href="#portfolio"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
+
+                <div class="work hidden">
+                    <img src="./Portfolio_pics/img99.jpg" alt="sorrit">
+                    <div class="layer">
+                        <h3><b>"MentorLink"</b></h3>
+                        <p>yeah yeah</p>
+                        <a href="#portfolio"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                
             </div>
             <a href="#" class = "btn" id = "seeMore_btn">See More</a>
         </div>
@@ -162,13 +182,11 @@
             <div class="row">
                 <div class="contact_left">
                     <h1 class="subtitle">Contact Me</h1>
-                    <p>contact@gmail.com</p>
-                    <p>5875833336</p>
+                    <p>Okibeabang11@gmail.com</p>
+                    <p>587-583-3336</p>
                     <div class="social_icons">
-                        <a href="#">My linked IN</a>
-                        <a href="#">My linked IN</a>
-                        <a href="#">My linked IN</a>
-                        <a href="#">My linked IN</a>
+                        <a href="www.linkedin.com/in/okibe-abang-0a704b264"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/OkibeAbang"><i class="fa-brands fa-github"></i></a>
                     </div>
                     <a href="./Portfolio_pics/co-op Resume.pdf"  download class = "btn btn2">Download Resume</a>
                 </div>
@@ -182,7 +200,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright"> copyright Message</div>
+        <div class="copyright"> Okibe Abang 2024 </div>
     </div>
 
     

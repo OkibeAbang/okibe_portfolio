@@ -6,7 +6,7 @@
 }
 
 body{
-    background: #080808;
+    background: #000;
     color: #fff;
 }
 
@@ -17,9 +17,11 @@ html{
 #header{
     width: 100%;
     height: 100vh;
-    /*background-image: url(image path)*/
-    background-size: cover;
-    background-position: center;
+    background-image: url(./Portfolio_pics/computer.jpg);
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: right 100px center; /* Positions the image 20px from the right edge and vertically centered */
+    padding-right: 20px;
 }
 
 .container{
@@ -76,7 +78,9 @@ nav ul li a:hover::after{
 }
 
 .header_txt span{
-    color: #ff004f;
+    background: linear-gradient(to top, #ff0044 0%, #ffb199 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -256,10 +260,9 @@ nav ul li a:hover::after{
 
 .layer a{
     margin-top: 20px;
-    color: #ff004f;
+    color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    background: #fff;
+    font-size: 28px;
     width: 60px;
     height: 16px;
     border-radius: 50%;
@@ -374,11 +377,11 @@ form .btn2{
 
 /*Media Queries*/
 
-nav .fas{
+nav .fa-solid{
     display: none;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
     #header{
         background-image: url(/);
     }
@@ -389,7 +392,7 @@ nav .fas{
     .header_txt h1{
         font-size: 30px;
     }
-    nav .fas{
+    nav .fa-solid{
         display: block;
         font-size: 25px;
     }
@@ -408,8 +411,8 @@ nav .fas{
         display: block;
         margin: 25px;
     }
-    nav ul .fas{
-        position: 'absolute';
+    nav ul .fa-solid{
+        position: absolute;
         top: 25px;
         left: 25px;
         cursor: pointer;
