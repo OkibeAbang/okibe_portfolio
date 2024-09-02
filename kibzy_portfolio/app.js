@@ -1,1 +1,0 @@
-//use onclick so that when you click on the see more button, more pictures show
