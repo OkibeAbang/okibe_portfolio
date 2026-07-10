@@ -1,0 +1,157 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  33% { transform: translateY(-8px) rotate(1deg); }
+  66% { transform: translateY(4px) rotate(-1deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes status-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+  70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- Animation utilities ---------- */
+.animate-fade-in { animation: fade-in 0.6s ease both; }
+.animate-fade-in-up { animation: fade-in-up 0.6s ease both; }
+.animate-scale-in { animation: scale-in 0.5s ease both; }
+.animate-float { animation: float 8s ease-in-out infinite; }
+.animate-glow-pulse { animation: glow-pulse 4s ease-in-out infinite; }
+.animate-status-pulse { animation: status-pulse 2s ease-in-out infinite; }
+
+/* ---------- Brand design system ---------- */
+.gradient-text {
+  background: linear-gradient(135deg, #7c3aed, #06b6d4, #10b981);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dark .gradient-text {
+  background: linear-gradient(135deg, #a78bfa, #22d3ee, #34d399);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg-animated {
+  background: linear-gradient(270deg, rgba(124, 58, 237, 0.05), rgba(6, 182, 212, 0.05), rgba(16, 185, 129, 0.05));
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+.dark .gradient-bg-animated {
+  background: linear-gradient(270deg, rgba(167, 139, 250, 0.06), rgba(34, 211, 238, 0.06), rgba(52, 211, 153, 0.05));
+  background-size: 400% 400%;
+}
+
+.navbar-blur {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+.gradient-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #7c3aed, #06b6d4, transparent);
+  opacity: 0.3;
+}
+.dark .gradient-divider {
+  background: linear-gradient(90deg, transparent, #a78bfa, #22d3ee, transparent);
+  opacity: 0.2;
+}
+
+.gradient-icon-bg {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1));
+}
+.dark .gradient-icon-bg {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.15), rgba(34, 211, 238, 0.1));
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #7c3aed, #0891b2);
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #6d28d9, #0e7490);
+  box-shadow: 0 4px 20px -4px rgba(124, 58, 237, 0.4);
+}
+.dark .btn-gradient {
+  background: linear-gradient(135deg, #a78bfa, #22d3ee);
+  color: #09090b;
+}
+.dark .btn-gradient:hover {
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+  box-shadow: 0 4px 20px -4px rgba(167, 139, 250, 0.4);
+}
+
+.glow-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glow-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px -8px rgba(124, 58, 237, 0.2);
+}
+.dark .glow-card:hover {
+  box-shadow: 0 8px 30px -8px rgba(167, 139, 250, 0.15), 0 4px 15px -4px rgba(34, 211, 238, 0.1);
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 1rem;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 1px;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4, #10b981);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.gradient-border:hover::before { opacity: 1; }
+.dark .gradient-border::before {
+  background: linear-gradient(135deg, #a78bfa, #22d3ee, #34d399);
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.25);
+}
